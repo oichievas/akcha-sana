@@ -1,0 +1,24 @@
+@import '../helpers/global.scss';
+@import '../helpers/mixins.scss';
+@import '../helpers/variables.scss';
+
+.registration_title {
+  text-align: center;
+  &::placeholder {
+    padding: 13px 0 13px 10px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 45px;
+  
+    span {
+      color: black;
+    }
+  }
+}

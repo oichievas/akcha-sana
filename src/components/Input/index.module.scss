@@ -1,0 +1,15 @@
+@import '../helpers/mixins.scss';
+@import '../helpers/variables.scss';
+
+input {
+  border-radius: 8px;
+  height: 46px;
+  width: 100%;
+  @include font(18px, 21px);
+  margin-bottom: 20px;
+  padding: 5px;
+  &:hover {
+    border: 2px solid $main-violet;
+  }
+}
+
