@@ -1,40 +1,25 @@
 import React from 'react'
-import Input from '../../components/Input/Input'
-import RegistrationTitle from '../../components/RegistrationTitle'
-// import { Link } from 'react-router-dom'
-import cls from'./index.module.scss'
+import { Box, Button, Container, Heading, Input, Stack, Text } from '@chakra-ui/react'
 
 export default function SignUp() {
   return (
-    <div className={ cls.sign__up }>
-      {/* <Link to='/'> {<h2> Назад </h2>} </Link> */}
-      <div className={ cls.container }>
-      <RegistrationTitle
-        title='Регистрация'
-        underTitle='Для входа в избранное и лич. кабинет вам необходимо зарегистрироваться'
-      />
-      <Input 
-        className= 'input'
-        placeholder = 'Логин'
-        // value= ''
-        onBlur = ''
-      />
-      <Input 
-        className= 'input'
-        placeholder = 'Пароль'
-        // value= ''
-        onBlur = ''
-        type = 'password'
-      />
-      <Input 
-        className= 'input'
-        placeholder = 'Секретное слово'
-        // value= ''
-        onBlur = ''
-        type = 'text'
-      />
-      <button className={ cls.btn }>ПРОДОЛЖИТЬ</button>
-      </div>
-    </div>
+    <Box display="flex" alignItems="center" justifyContent="center" height={'80vh'}>
+      <Container textAlign={'center'} >
+        <Heading as='h3' size='2xl' py={'4'}>
+          Регистрация
+        </Heading>
+        <Text fontSize='lg' mb={10}>
+          Для входа на сайт вам необходимо зарегистрироваться
+        </Text>
+        <Stack spacing={5} mb={20}>
+          <Input variant='outline' placeholder='Почта' />
+          <Input variant='outline' placeholder='Пароль' />
+        </Stack>
+        <Button colorScheme='teal' variant='outline' w="100%">
+          ПРОДОЛЖИТЬ
+        </Button>
+
+      </Container>
+    </Box>
   )
 }
